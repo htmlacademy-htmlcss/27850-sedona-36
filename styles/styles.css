@@ -95,7 +95,8 @@ body {
 
 .advantages-lead,
 .advice-lead,
-.search-hotel-lead {
+.search-hotel-lead,
+.newsletter-lead {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -104,8 +105,8 @@ body {
   color: #000000;
 }
 
-.advantages-header .advantages-description,
-.advice-header .advice-description,
+.advantages-header-description,
+.advice-header-description,
 .search-hotel-description,
 .newsletter-description {
   font-size: 22px;
@@ -123,8 +124,9 @@ body {
   color: #000000;
 }
 
-.advantages-item-block,
-.advantages-item-blue .advantages-item-block h3 {
+
+.advantages-item-block-blue,
+.advantages-title-blue {
   color: #ffffff;
   text-align: center;
 }
@@ -133,23 +135,23 @@ body {
   background-color: #82B3D3;
 }
 
-.advantages-item-grey-1,
+.advantages-item-grey,
 .advice-item-grey {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-item-grey-2 {
+.advantages-item-grey-dark {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.advantages-description,
+.advice-description {
+  text-align: center;
+}
+
 .button-search-hotel {
-  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
   background-color: #756157;
   border-radius: 4px;
 }
@@ -160,14 +162,11 @@ body {
   color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .newsletter-lead {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
+  color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -180,7 +179,6 @@ body {
 
 .footer-phone {
   color: #000000;
-  font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -200,10 +198,13 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  text-transform: capitalize;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .hotels-filter-title {
@@ -213,22 +214,23 @@ body {
   text-transform: capitalize;
 }
 
-.hotels-filter-item {
+.control-input {
   line-height: 23px;
+  text-transform: capitalize;
 }
 
 .button-select {
   font-size: 16px;
   line-height: 20px;
-  background: #82B3D3;
   border-radius: 4px;
+  background-color: #82B3D3;
 }
 
 .button-reset {
   font-size: 16px;
   line-height: 20px;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .sort-result-description {
@@ -245,6 +247,7 @@ body {
   line-height: 28px;
   color: #000000;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .hotel-card-description .hotel-card-price {
@@ -265,7 +268,7 @@ body {
   border-radius: 4px;
 }
 
-.hotel-card-button-favourites {
+.hotel-card-favourites-added {
   font-size: 16px;
   line-height: 20px;
   background-color: #7DB54F;
@@ -292,15 +295,8 @@ body {
 }
 
 .pagination-current {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
   color: #000000;
   background-color: #F2F2F2;
-  border-radius: 4px;
 }
 
 .newsletter-hotels {
@@ -313,7 +309,5 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: center;
 }
-
-
-
