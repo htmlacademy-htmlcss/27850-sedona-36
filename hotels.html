@@ -37,8 +37,10 @@
               <span class="notification-badge">12</span>
             </a>
           </li>
+          <li>
+            <a class="button button-header" href="#search">Хочу сюда!</a>
+          </li>
         </ul>
-        <a class="button button-header" href="#search">Хочу сюда!</a>
       </header>
 
       <main class="main-inner" data-test="main">
@@ -47,12 +49,12 @@
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
+                <a class="breadcrumbs-home-icon" href="index.html">
                 <span class="visually-hidden">Главная</span>
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
+                <a class="breadcrumbs-current">Гостиницы</a>
               </li>
             </ul>
           </header>
@@ -116,25 +118,25 @@
         <div class="catalog-hotels" data-test="catalog">
           <div class="sort-result">
             <p class="sort-result-description">Найдено гостиниц: 38</p>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap" selected>Сначала дешёвое</option>
-              <option value="popular">Сначала популярное</option>
-              <option value="expensive">Сначала дорогое</option>
+            <select class="select" aria-label="Сортировка">
+              <option class="select-control" value="cheap" selected>Сначала дешёвое</option>
+              <option class="select-control" value="popular">Сначала популярное</option>
+              <option class="select-control" value="expensive">Сначала дорогое</option>
             </select>
             <ul class="button-sort-list">
               <li class="button-sort-item">
-                <a class="button button-sort-table" href="#">
-                  <span class="visually-hidde">Показать таблицу</span>
+                <a class="button-sort-table" href="#">
+                  <span class="visually-hidden">Показать таблицу</span>
                 </a>
               </li>
               <li class="button-sort-item">
-                <a class="button button-sort-default-pic" href="#">
-                  <span class="visually-hidde">Показать карточку</span>
+                <a class="button-sort-default-pic" href="#">
+                  <span class="visually-hidden">Показать карточку</span>
                 </a>
               </li>
               <li class="button-sort-item">
-                <a class="button button-sort-list" href="#">
-                  <span class="visually-hidde">Показать список</span>
+                <a class="button-sort-list-view" href="#">
+                  <span class="visually-hidden">Показать список</span>
                 </a>
               </li>
             </ul>
@@ -146,8 +148,8 @@
               <li class="hotels-result-item">
                 <article class="hotel-card">
                   <a class="hotel-card-link" href="#">
-                    <img class="hotel-card-image" src="images/content/hotel-amara.jpg" width="300" height="212" alt="Звёздное небо среди скал">
                     <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+                    <img class="hotel-card-image" src="images/content/hotel-amara.jpg" width="300" height="212" alt="Звёздное небо среди скал">
                   </a>
                   <p class="hotel-card-description">
                     <span class="hotel-card-type">Гостиница</span>
@@ -166,8 +168,8 @@
               <li class="hotels-result-item">
                 <article class="hotel-card">
                   <a class="hotel-card-link" href="#">
-                    <img class="hotel-card-image" src="images/content/hotel-villas.jpg" width="300" height="212" alt="Радуга над скалами на закате солнца">
                     <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+                    <img class="hotel-card-image" src="images/content/hotel-villas.jpg" width="300" height="212" alt="Радуга над скалами на закате солнца">
                   </a>
                   <p class="hotel-card-description">
                     <span class="hotel-card-type">Гостиница</span>
@@ -186,8 +188,8 @@
               <li class="hotels-result-item">
                 <article class="hotel-card">
                   <a class="hotel-card-link" href="#">
-                    <img class="hotel-card-image" src="images/content/hotel-desert.jpg" width="300" height="212" alt="Голубое небо над скалами">
                     <h3 class="hotel-card-title">Desert Quail Inn</h3>
+                    <img class="hotel-card-image" src="images/content/hotel-desert.jpg" width="300" height="212" alt="Голубое небо над скалами">
                   </a>
                   <p class="hotel-card-description">
                     <span class="hotel-card-type">Гостиница</span>
@@ -206,8 +208,8 @@
               <li class="hotels-result-item">
                 <article class="hotel-card">
                   <a class="hotel-card-link" href="#">
-                    <img class="hotel-card-image" src="images/content/hotel-greentree.jpg" width="300" height="212" alt="Звездное небо над красными скалами">
                     <h3 class="hotel-card-title">GreenTree Inn</h3>
+                    <img class="hotel-card-image" src="images/content/hotel-greentree.jpg" width="300" height="212" alt="Звездное небо над красными скалами">
                   </a>
                   <p class="hotel-card-description">
                     <span class="hotel-card-type">Гостиница</span>
@@ -259,16 +261,20 @@
         </div>
 
         <section class="newsletter-hotels" data-test="subscribe">
-          <h2 class="visually-hidden">Поле для ввода email для рассылок</h2>
-          <p class="newsletter-lead-hotels">Подпишитесь на рассылку</p>
-          <p class="newsletter-description-hotels">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="newsletter-email">
-              <span class="visually-hidden">E-mail</span>
-            </label>
-            <input class="field" type="email" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email" required>
-            <button class="button button-newsletter" type="submit">Подписаться</button>
-          </form>
+          <div class="newsletter-hotels-wrapper">
+            <h2 class="visually-hidden">Блок подписки для email рассылок</h2>
+            <p class="newsletter-lead-hotels">Подпишитесь на рассылку</p>
+            <p class="newsletter-description-hotels">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="newsletter-form-name">
+                <label for="user-email">
+                  <span class="visually-hidden">Ваш e-mail</span>
+                </label>
+                <input type="email" placeholder="Ваш e-mail" name="user-email" id="user-email" required>
+              </p>
+              <button class="button button-newsletter" type="submit">Подписаться</button>
+            </form>
+          </div>
         </section>
       </main>
 
